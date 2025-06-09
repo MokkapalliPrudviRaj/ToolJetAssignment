@@ -1,6 +1,6 @@
 
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -36,4 +36,22 @@ export class AppComponent {
     });
   }
 
+  activeDropdown: string | null = null;
+
+  toggleDropdown(menu: string): void {
+    if (this.activeDropdown === menu) {
+      this.activeDropdown = null;
+    } else {
+      this.activeDropdown = menu;
+    }
+  }
+
+  // Close dropdown on outside click
+  @HostListener('document:click', ['$event.target'])
+  onClickOutside(targetElement: HTMLElement): void {
+    const insideDropdown = targetElement.closest('.dropdown');
+    if (!insideDropdown) {
+      this.activeDropdown = null;
+    }
+  }
 }

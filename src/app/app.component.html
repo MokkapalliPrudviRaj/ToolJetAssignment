@@ -4,9 +4,9 @@
   <div class="logo"></div>
 
   <div class="nav-links">
-    <div class="nav-item dropdown">
-      Product <span>▾</span>
-      <div class="dropdown-menu">
+    <div class="nav-item dropdown" (click)="toggleDropdown('product')" #productRef>
+      Product <span [class.rotated]="activeDropdown === 'product'">▾</span>
+      <div class="dropdown-menu" [class.show]="activeDropdown === 'product'">
         <div class="dropdown-item">
           <img src="../assets/images/appbuilder.svg" alt=""> App Builder
         </div>
@@ -19,9 +19,9 @@
       </div>
     </div>
     <div class="nav-item show">Pricing</div>
-    <div class="nav-item show">Blog <span>▾</span></div>
-    <div class="nav-item dropdown">Resources <span>▾</span>
-      <div class="dropdown-menu">
+    <div class="nav-item show">Blog</div>
+    <div class="nav-item dropdown" (click)="toggleDropdown('resources')" #resourcesRef>Resources <span [class.rotated]="activeDropdown === 'resources'">▾</span>
+      <div class="dropdown-menu" [class.show]="activeDropdown === 'resources'">
         <div class="dropdown-item">
           <img src="../assets/images/templates.svg" alt=""> Templates
         </div>
