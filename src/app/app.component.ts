@@ -1,6 +1,6 @@
 
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, ViewChild, ElementRef, HostListener, AfterViewInit } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -9,7 +9,7 @@ import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent  implements AfterViewInit{
   title = 'tooljetassignment';
   
   @ViewChild('carouselTrack', { static: true }) track!: ElementRef;
@@ -53,5 +53,41 @@ export class AppComponent {
     if (!insideDropdown) {
       this.activeDropdown = null;
     }
+  }
+
+  @ViewChild('observeSection') observeSection!: ElementRef;
+
+  allIcons: string[] = [
+    'assets/images/9ec6bdfc1870ae942f24644f5115cfe5bf9cfa80-260x258.svg.svg',
+    'assets/images/3b6417eaddee16db72e8f06f2afe997a148a76bf-259x258.svg.svg',
+    'assets/images/0a7e7d9aa96c915a5f0bc1b3cc9a8a5b1fc45320-259x258.svg.svg',
+    'assets/images/5ce22a8903d7eac246e6afaf0b3a47ecd8c10b7d-259x259.svg.svg'
+  ];
+
+  visibleIcons: string[] = [];
+  observer!: IntersectionObserver;
+
+  ngAfterViewInit() {
+    this.observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.startAddingImages();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    this.observer.observe(this.observeSection.nativeElement);
+  }
+
+  async startAddingImages() {
+    this.visibleIcons = []; // Reset
+    for (let i = 0; i < this.allIcons.length; i++) {
+      await this.delay(500); // Delay between icons
+      this.visibleIcons.push(this.allIcons[i]);
+    }
+  }
+
+  delay(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
