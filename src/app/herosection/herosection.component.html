@@ -1,0 +1,346 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;500&display=swap" />
+
+<div class="website-hero-section-layout">
+    <div class="nav">
+        <div class="main-logo">
+            <img class="main-logo-child" alt="" src="assets/images/2logo.svg">
+
+            <div class="everflow">EverFlow</div>
+        </div>
+        <div class="navgroup">
+            <div class="navitem">
+                <div class="everflow">Platform</div>
+                <img class="iconscaret-down" alt="" src="assets/images/caret-down.svg">
+
+            </div>
+            <div class="navitem">
+                <div class="everflow">Product</div>
+                <img class="iconscaret-down" alt="" src="assets/images/caret-down.svg">
+
+            </div>
+            <div class="navitem">
+                <div class="everflow">Pricing</div>
+            </div>
+            <div class="navitem">
+                <div class="everflow">Company</div>
+                <img class="iconscaret-down" alt="" src="assets/images/caret-down.svg">
+
+            </div>
+            <div class="navitem">
+                <div class="everflow">Resources</div>
+                <img class="iconscaret-down" alt="" src="assets/images/caret-down.svg">
+
+            </div>
+        </div>
+        <div class="logintryfor-free-button">
+            <div class="text">
+                <div class="button">Login</div>
+            </div>
+            <div class="text1">
+                <div class="button">Try for free</div>
+                <img class="arrow-up-right" alt="" src="assets/images/arrow up right.svg">
+
+            </div>
+        </div>
+    </div>
+    <div class="frame-parent">
+        <div class="lorem-ipsum-dolor-sit-parent">
+            <div class="lorem-ipsum-dolor">Lorem ipsum dolor sit </div>
+            <img class="frame-child" alt="" src="assets/images/Vector 4774.svg">
+
+        </div>
+        <div class="in-tempor">in tempor</div>
+        <div class="lorem-ipsum-dolor1">Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod</div>
+        <div class="grid-patterns">
+            <div class="grid-patterns-child">
+            </div>
+            <div class="grid-patterns-item">
+            </div>
+            <div class="grid-patterns-inner">
+            </div>
+            <div class="grid-patterns-item">
+            </div>
+            <div class="grid-patterns-inner">
+            </div>
+            <div class="grid-patterns-item">
+            </div>
+            <div class="grid-patterns-inner">
+            </div>
+            <div class="grid-patterns-item">
+            </div>
+            <div class="grid-patterns-child">
+            </div>
+        </div>
+        <div class="grid-patterns1">
+            <div class="grid-patterns-child">
+            </div>
+            <div class="grid-patterns-item">
+            </div>
+            <div class="grid-patterns-inner">
+            </div>
+            <div class="grid-patterns-item">
+            </div>
+            <div class="grid-patterns-inner">
+            </div>
+            <div class="grid-patterns-item">
+            </div>
+            <div class="grid-patterns-inner">
+            </div>
+            <div class="grid-patterns-item">
+            </div>
+            <div class="grid-patterns-child14">
+            </div>
+        </div>
+
+        <form (submit)="submitInput()" class="input-form">
+            <div class="prompt-input">
+                <!-- Hidden span to measure text width -->
+                <div class="ghost-wrapper">
+                    <span class="ghost-text">{{ userInput || currentPlaceholder }}</span>
+                    <div class="tab-wrapper" (click)="fillPlaceholder()">
+                        <div class="tab">⇥Tab</div>
+                    </div>
+                </div>
+
+                <textarea class="custom-input" [placeholder]="currentPlaceholder" [(ngModel)]="userInput"
+                    name="userPrompt" (keydown)="handleKeyDown($event)">
+    </textarea>
+
+                <!-- Submit button appears only when there's text -->
+                <button *ngIf="userInput.trim()" type="submit" class="submit-icon-btn">
+                    <img src="assets/images/submiticon.svg" alt="submit" />
+                </button>
+            </div>
+        </form>
+
+
+
+        <div class="frame-group">
+            <div class="rectangle-parent">
+                <div class="frame-item">
+                </div>
+                <img class="frame-icon" alt="" src="Frame.svg">
+
+                <div class="enterprise-ready">
+                    <img class="frame-icon1" alt="" src="assets/images/Enterprise ready.svg">
+
+                </div>
+                <div class="loreum-ipsum-dolor-parent">
+                    <div class="loreum-ipsum-dolor">Loreum ipsum dolor</div>
+                    <div class="sit-met-consectetur">sit met consectetur</div>
+                </div>
+            </div>
+            <div class="rectangle-parent">
+                <div class="frame-item">
+                </div>
+                <img class="frame-icon" alt="" src="Frame.svg">
+
+                <div class="enterprise-ready">
+                    <img class="frame-icon1" alt="" src="assets/images/Enterprise ready.svg">
+
+                </div>
+                <div class="loreum-ipsum-dolor-parent">
+                    <div class="loreum-ipsum-dolor">Loreum ipsum dolor</div>
+                    <div class="sit-met-consectetur">sit met consectetur</div>
+                </div>
+            </div>
+            <div class="rectangle-parent">
+                <div class="frame-item">
+                </div>
+                <img class="frame-icon" alt="" src="Frame.svg">
+
+                <div class="enterprise-ready">
+                    <img class="frame-icon1" alt="" src="assets/images/Enterprise ready.svg">
+
+                </div>
+                <div class="loreum-ipsum-dolor-parent">
+                    <div class="loreum-ipsum-dolor">Loreum ipsum dolor</div>
+                    <div class="sit-met-consectetur">sit met consectetur</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img class="gradient-icon" alt="" src="assets/images/gradient.svg">
+
+    <div class="logos-wrapper">
+        <div class="logos-track">
+            <ul>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo1.svg" alt="">
+                    <a href="https://www.tooljet.ai/" class="case-study" target="_blank" rel="noopener noreferrer">Case
+                        Study</a>
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo2.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo3.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo4.svg" alt="">
+                    <a href="https://www.tooljet.ai/" class="case-study" target="_blank" rel="noopener noreferrer">Case
+                        Study</a>
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo5.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo6.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo7.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo8.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo9.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo10.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo11.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo12.svg" alt="">
+                    <a href="https://www.tooljet.ai/" class="case-study" target="_blank" rel="noopener noreferrer">Case
+                        Study</a>
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo13.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo14.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo15.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo16.svg" alt="">
+                    <a href="https://www.tooljet.ai/" class="case-study" target="_blank" rel="noopener noreferrer">Case
+                        Study</a>
+                </li>
+            </ul>
+            <!-- Duplicate list for smooth infinite scroll -->
+            <ul aria-hidden="true">
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo1.svg" alt="">
+                    <a href="https://www.tooljet.ai/" class="case-study" target="_blank" rel="noopener noreferrer">Case
+                        Study</a>
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo2.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo3.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo4.svg" alt="">
+                    <a href="https://www.tooljet.ai/" class="case-study" target="_blank" rel="noopener noreferrer">Case
+                        Study</a>
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo5.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo6.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo7.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo8.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo9.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo10.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo11.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo12.svg" alt="">
+                    <a href="https://www.tooljet.ai/" class="case-study" target="_blank" rel="noopener noreferrer">Case
+                        Study</a>
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo13.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo14.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo15.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo16.svg" alt="">
+                    <a href="https://www.tooljet.ai/" class="case-study" target="_blank" rel="noopener noreferrer">Case
+                        Study</a>
+                </li>
+            </ul>
+            <ul aria-hidden="true">
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo1.svg" alt="">
+                    <a href="https://www.tooljet.ai/" class="case-study" target="_blank" rel="noopener noreferrer">Case
+                        Study</a>
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo2.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo3.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo4.svg" alt="">
+                    <a href="https://www.tooljet.ai/" class="case-study" target="_blank" rel="noopener noreferrer">Case
+                        Study</a>
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo5.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo6.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo7.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo8.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo9.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo10.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo11.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo12.svg" alt="">
+                    <a href="https://www.tooljet.ai/" class="case-study" target="_blank" rel="noopener noreferrer">Case
+                        Study</a>
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo13.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo14.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo15.svg" alt="">
+                </li>
+                <li class="logo-slot">
+                    <img class="company-logo" src="assets/images/Compnay logo16.svg" alt="">
+                    <a href="https://www.tooljet.ai/" class="case-study" target="_blank" rel="noopener noreferrer">Case
+                        Study</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

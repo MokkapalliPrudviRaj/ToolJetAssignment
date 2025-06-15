@@ -1,11 +1,12 @@
 
 import { CommonModule } from '@angular/common';
 import { Component, ViewChild, ElementRef, HostListener, AfterViewInit } from '@angular/core';
+import { HerosectionComponent } from "./herosection/herosection.component";
 
 @Component({
   standalone: true,
   selector: 'app-root',
-  imports: [CommonModule], // ✅ Required for ngClass
+  imports: [CommonModule, HerosectionComponent], // ✅ Required for ngClass
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
